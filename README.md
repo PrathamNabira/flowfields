@@ -11,7 +11,7 @@ sudo dnf install raylib raylib-devel
 Compile the project:
 
 ```bash
-g++ flow.cpp RealVector.cpp config.cpp -o flow -lraylib -lGL -lm -ldl -lpthread -lrt -lX11
+g++ flow.cpp RealVector.cpp config.cpp particle.cpp -o flow -lraylib -lGL -lm -ldl -lpthread -lrt -lX11
 ```
 
 > Compiles the project and links necessary libraries.
