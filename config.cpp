@@ -3,6 +3,7 @@
 #include <cmath>
 #include <algorithm>
 using std::clamp;
+
 vector<vector<slot>> BOARD(ROWS+1,vector<slot>(COLS+1));//size and initial values
 double map_to(double minimum, double maximum, double new_min, double new_max, double value){
   value = clamp(value,minimum,maximum);

@@ -2,10 +2,7 @@
 #include <cmath>
 
 RealVector::RealVector(){}
-RealVector::RealVector(float x_,float y_){
-  x=x_;
-  y=y_;
-};
+RealVector::RealVector(float x_,float y_):x(x_),y(y_){};
 
 RealVector RealVector::add(RealVector &vec){
   return RealVector(x+vec.x,y+vec.y);
@@ -30,4 +27,3 @@ float RealVector::getMag(){
 float RealVector::angleOf(){
   return atan2(y, x);
 }
-

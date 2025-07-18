@@ -1,6 +1,5 @@
 #include <raylib.h>
 #include <vector>
-
 #include "RealVector.hpp"
 using std::vector;
 
@@ -10,6 +9,12 @@ using std::vector;
 #define SCL 10
 #define ROWS (HEIGHT/SCL)
 #define COLS (WIDTH/SCL)
+
+//PARTICLE VARIABLES
+#define PARTICLE_RADIUS 2
+#define PARTICLE_MAX_SPEED 2
+#define PARTICLE_MIN_SPEED 1
+#define NUM_PARTICLES 200
 
 //BOARD
 struct slot{
