@@ -9,7 +9,7 @@ int main(){
   srand(time(nullptr));
   SetTargetFPS(60);
 
-  double MULT=2.5f;
+  double MULT=0.5f;
   double length = SCL*MULT;
   for (int y = 0; y<ROWS; y++) {
     for (int x = 0; x<COLS; x++) {
@@ -28,7 +28,7 @@ int main(){
   double z = rand()%10000;
   while (!WindowShouldClose()) {
   BeginDrawing();
-  ClearBackground(WHITE);
+  // ClearBackground(WHITE);//comment out to have trailing point effect
   for (int y=0; y<ROWS; y++) {
     for (int x=0; x<COLS; x++) {
       double angle= field_func((double) x*0.03+z, (double) y*0.03+z); //double angle= field_func((double) x*0.3, (double) y*0.3); for zoom
@@ -36,7 +36,7 @@ int main(){
       BOARD[y][x].vec=RealVector(cos(angle)*length,sin(angle)*length);
       Vector2 end={BOARD[y][x].start_point.x+BOARD[y][x].vec.x,BOARD[y][x].start_point.y+BOARD[y][x].vec.y};
       u_char c = map_to(0, 2*PI, 0, 255, angle);
-      DrawLineEx(BOARD[y][x].start_point, end, 1, (Color){0,c,c,255});
+      // DrawLineEx(BOARD[y][x].start_point, end, 1, (Color){0,c,c,255}); // comment out to see the lines 
     }
   }
     for (int i = 0; i<NUM_PARTICLES; i++) {
@@ -45,7 +45,7 @@ int main(){
     particles[i].update();
     particles[i].show();
   }
-  z+=0.003;
+  z+=0.0003;  //comment out to stop the movement of field stabalize the particle movement 
   EndDrawing();
   }
   CloseWindow();

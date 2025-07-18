@@ -21,5 +21,5 @@ void particle::apply_Force(RealVector force){
 }
 
 void particle::show(){
-  DrawCircle(pos.x, pos.y, PARTICLE_RADIUS, {255,0,0,255});
+  DrawCircle(pos.x, pos.y, PARTICLE_RADIUS, {255,0,0,20});//change a ie last of the 4 numbers in color to control transparency 
 }

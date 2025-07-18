@@ -10,6 +10,6 @@ double map_to(double minimum, double maximum, double new_min, double new_max, do
   return (value-minimum)*(new_max-new_min)/(maximum-minimum)+new_min;
 }
 double field_func(double x, double y){
-  return RealVector(cos(y),sin(x)).angleOf();
+  return RealVector(cos(y),sin(x)).angleOf();// comment out to add a new filed function
 }
 
