@@ -13,6 +13,7 @@ RealVector RealVector::sub(RealVector &vec){
 RealVector RealVector::mult(float num){
   return RealVector(x*num,y*num);
 }
+
 RealVector RealVector::limit(float min_speed, float max_speed){
   float mag=getMag();
   RealVector res = *this;
@@ -21,6 +22,7 @@ RealVector RealVector::limit(float min_speed, float max_speed){
   else if(mag<min_speed)res=res.mult(min_speed/mag);
   return res;
 }
+
 float RealVector::getMag(){
   return sqrt((pow(x, 2),pow(y, 2)));
 }
