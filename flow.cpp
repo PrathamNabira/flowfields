@@ -32,7 +32,6 @@ int main(){
   for (int y=0; y<ROWS; y++) {
     for (int x=0; x<COLS; x++) {
       double angle= field_func((double) x*0.03+z, (double) y*0.03+z); //double angle= field_func((double) x*0.3, (double) y*0.3); for zoom
-
       BOARD[y][x].vec=RealVector(cos(angle)*length,sin(angle)*length);
       Vector2 end={BOARD[y][x].start_point.x+BOARD[y][x].vec.x,BOARD[y][x].start_point.y+BOARD[y][x].vec.y};
       u_char c = map_to(0, 2*PI, 0, 255, angle);
